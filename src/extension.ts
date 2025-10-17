@@ -1,5 +1,5 @@
-import * as fs from 'fs'
-import * as path from 'path'
+import * as fs from 'fs';
+import * as path from 'path';
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
@@ -18,11 +18,11 @@ export function activate(context: vscode.ExtensionContext) {
 		vscode.window.showInformationMessage("Let's begin! Your move X");
 
 		function restartGame(response: string | undefined) {
-			if (response == "Yes") {
+			if (response === "Yes") {
 				panel.webview.postMessage({ command: 'restart' });
 			}
 			else {
-				panel.dispose()
+				panel.dispose();
 			}
 		}
 
